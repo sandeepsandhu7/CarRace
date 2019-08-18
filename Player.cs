@@ -9,6 +9,7 @@ namespace CarRace
 {
     public class Player : Bet
     {
+        //passing the local value to global variable using this keyword
         public Bet MyBet;
         public decimal Cash;
         public int[] GuyArray;
@@ -21,11 +22,14 @@ namespace CarRace
 
         public void StatusUpdate()
         {
+            // if any player set the bet then it will call the another method to print his name and car number also 
             MyRadioButton.Text = Name + " HAS $" + Cash;   
         }
 
+        //it is used to clear the amount of bet after completion the race
         public void ClearBet()
         {
+            // if the user has not set any bet then it will display no one has set the bet 
             MyBet = null;
             MyLabel2.Text = Name + " HASN'T PLACED A BET";
         }
@@ -46,7 +50,7 @@ namespace CarRace
                  return false;
             }
         }
-
+        //this method is used for collection of the player if he is winner then it will increment in his account
         public void Collect(string Winner)
         {
             if (MyBet != null) 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-
+//
 namespace CarRace
 {
     public partial class Form1 : Form
@@ -44,7 +44,7 @@ namespace CarRace
         {
             InitializeComponent();
 
-            
+            //
             CarsArray[0] = new Car() { MyPictureBox = pictureBox1, Name = "Car #1", RaceTrackLength = racetrackPictureBox.Width - pictureBox1.Width, StartingPosition = pictureBox1.Left, Randomizer = Randomizer, oddsFor = Randomizer.Next(1,3), oddsAgainst = Randomizer.Next(2,8) };
             CarsArray[1] = new Car() { MyPictureBox = pictureBox2, Name = "Car #2", RaceTrackLength = racetrackPictureBox.Width - pictureBox1.Width, StartingPosition = pictureBox2.Left, Randomizer = Randomizer, oddsFor = Randomizer.Next(1, 3), oddsAgainst = Randomizer.Next(2,14) };
             CarsArray[2] = new Car() { MyPictureBox = pictureBox3, Name = "Car #3", RaceTrackLength = racetrackPictureBox.Width - pictureBox1.Width, StartingPosition = pictureBox3.Left, Randomizer = Randomizer, oddsFor = Randomizer.Next(1, 3), oddsAgainst = Randomizer.Next(2, 12) };
@@ -119,7 +119,7 @@ namespace CarRace
             this.SuspendLayout();
             // 
             // rdbtnSandeep
-            // 
+            //  this is the button for start the race
             this.rdbtnSandeep.AutoSize = true;
             this.rdbtnSandeep.Checked = true;
             this.rdbtnSandeep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,7 +132,7 @@ namespace CarRace
             this.rdbtnSandeep.CheckedChanged += new System.EventHandler(this.rdbtnSandeep_CheckedChanged);
             // 
             // rdbtnSukhman
-            // 
+            
             this.rdbtnSukhman.AutoSize = true;
             this.rdbtnSukhman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnSukhman.Location = new System.Drawing.Point(33, 326);
@@ -143,7 +143,7 @@ namespace CarRace
             this.rdbtnSukhman.CheckedChanged += new System.EventHandler(this.rdbtnSukhman_CheckedChanged);
             // 
             // rdbtnGuri
-            // 
+            
             this.rdbtnGuri.AutoSize = true;
             this.rdbtnGuri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnGuri.Location = new System.Drawing.Point(33, 349);
@@ -163,7 +163,7 @@ namespace CarRace
             this.label3.TabIndex = 10;
             // 
             // lblSandeepBet
-            // 
+            // this is the button for a punter which he can use to  place a bet
             this.lblSandeepBet.AutoSize = true;
             this.lblSandeepBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSandeepBet.Location = new System.Drawing.Point(266, 304);
@@ -173,7 +173,7 @@ namespace CarRace
             this.lblSandeepBet.Text = "Sandeep hasn\'t placed a bet";
             // 
             // lblSukhmanBet
-            // 
+            //  this is the button for a punter which he can use to  place a bet
             this.lblSukhmanBet.AutoSize = true;
             this.lblSukhmanBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSukhmanBet.Location = new System.Drawing.Point(266, 328);

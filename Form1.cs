@@ -45,10 +45,10 @@ namespace CarRace
             InitializeComponent();
 
             //
-            CarsArray[0] = new Car() { MyPictureBox = pictureBox1, Name = "Car #1", RaceTrackLength = racetrackPictureBox.Width - pictureBox1.Width, StartingPosition = pictureBox1.Left, Randomizer = Randomizer, oddsFor = Randomizer.Next(1,3), oddsAgainst = Randomizer.Next(2,8) };
-            CarsArray[1] = new Car() { MyPictureBox = pictureBox2, Name = "Car #2", RaceTrackLength = racetrackPictureBox.Width - pictureBox1.Width, StartingPosition = pictureBox2.Left, Randomizer = Randomizer, oddsFor = Randomizer.Next(1, 3), oddsAgainst = Randomizer.Next(2,14) };
-            CarsArray[2] = new Car() { MyPictureBox = pictureBox3, Name = "Car #3", RaceTrackLength = racetrackPictureBox.Width - pictureBox1.Width, StartingPosition = pictureBox3.Left, Randomizer = Randomizer, oddsFor = Randomizer.Next(1, 3), oddsAgainst = Randomizer.Next(2, 12) };
-            CarsArray[3] = new Car() { MyPictureBox = pictureBox4, Name = "Car #4", RaceTrackLength = racetrackPictureBox.Width - pictureBox1.Width, StartingPosition = pictureBox4.Left, Randomizer = Randomizer, oddsFor = Randomizer.Next(1, 3), oddsAgainst = Randomizer.Next(2, 10) };
+            CarsArray[0] = new Car() { MyPictureBox = pictureBox1, Name = "#1", RaceTrackLength = racetrackPictureBox.Width - pictureBox1.Width, StartingPosition = pictureBox1.Left, Randomizer = Randomizer, oddsFor = Randomizer.Next(1,3), oddsAgainst = Randomizer.Next(2,8) };
+            CarsArray[1] = new Car() { MyPictureBox = pictureBox2, Name = "#2", RaceTrackLength = racetrackPictureBox.Width - pictureBox1.Width, StartingPosition = pictureBox2.Left, Randomizer = Randomizer, oddsFor = Randomizer.Next(1, 3), oddsAgainst = Randomizer.Next(2,14) };
+            CarsArray[2] = new Car() { MyPictureBox = pictureBox3, Name = "#3", RaceTrackLength = racetrackPictureBox.Width - pictureBox1.Width, StartingPosition = pictureBox3.Left, Randomizer = Randomizer, oddsFor = Randomizer.Next(1, 3), oddsAgainst = Randomizer.Next(2, 12) };
+            CarsArray[3] = new Car() { MyPictureBox = pictureBox4, Name = "#4", RaceTrackLength = racetrackPictureBox.Width - pictureBox1.Width, StartingPosition = pictureBox4.Left, Randomizer = Randomizer, oddsFor = Randomizer.Next(1, 3), oddsAgainst = Randomizer.Next(2, 10) };
 
             PlayerArray[0] = new Player() { MyBet = null, Name = "Sandeep", Cash = 50, MyLabel = lblSandeep, MyRadioButton = rdbtnSandeep, MyLabel2 = lblSandeepBet };
             PlayerArray[1] = new Player() { MyBet = null, Name = "Sukhman", Cash = 50, MyLabel = lblSukhman, MyRadioButton = rdbtnSukhman, MyLabel2 = lblSukhmanBet };
@@ -58,14 +58,10 @@ namespace CarRace
             PlayerArray[1].StatusUpdate();
             PlayerArray[2].StatusUpdate();
 
-         
-
-
-        }
+         }
 
         private void btnRace_Click_1(object sender, EventArgs e)
         {
-
             CarsArray[0].TakeStartingPosition();
             CarsArray[1].TakeStartingPosition();
             CarsArray[2].TakeStartingPosition();
@@ -119,7 +115,7 @@ namespace CarRace
             this.SuspendLayout();
             // 
             // rdbtnSandeep
-            //  this is the button for start the race
+            // 
             this.rdbtnSandeep.AutoSize = true;
             this.rdbtnSandeep.Checked = true;
             this.rdbtnSandeep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,7 +128,7 @@ namespace CarRace
             this.rdbtnSandeep.CheckedChanged += new System.EventHandler(this.rdbtnSandeep_CheckedChanged);
             // 
             // rdbtnSukhman
-            
+            // 
             this.rdbtnSukhman.AutoSize = true;
             this.rdbtnSukhman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnSukhman.Location = new System.Drawing.Point(33, 326);
@@ -143,7 +139,7 @@ namespace CarRace
             this.rdbtnSukhman.CheckedChanged += new System.EventHandler(this.rdbtnSukhman_CheckedChanged);
             // 
             // rdbtnGuri
-            
+            // 
             this.rdbtnGuri.AutoSize = true;
             this.rdbtnGuri.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbtnGuri.Location = new System.Drawing.Point(33, 349);
@@ -163,7 +159,7 @@ namespace CarRace
             this.label3.TabIndex = 10;
             // 
             // lblSandeepBet
-            // this is the button for a punter which he can use to  place a bet
+            // 
             this.lblSandeepBet.AutoSize = true;
             this.lblSandeepBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSandeepBet.Location = new System.Drawing.Point(266, 304);
@@ -173,7 +169,7 @@ namespace CarRace
             this.lblSandeepBet.Text = "Sandeep hasn\'t placed a bet";
             // 
             // lblSukhmanBet
-            //  this is the button for a punter which he can use to  place a bet
+            // 
             this.lblSukhmanBet.AutoSize = true;
             this.lblSukhmanBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSukhmanBet.Location = new System.Drawing.Point(266, 328);
@@ -270,8 +266,13 @@ namespace CarRace
             // numericUpDown2
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(229, 391);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numericUpDown2.Minimum = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
             0});
@@ -279,7 +280,7 @@ namespace CarRace
             this.numericUpDown2.Size = new System.Drawing.Size(61, 20);
             this.numericUpDown2.TabIndex = 26;
             this.numericUpDown2.Value = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
             0});

@@ -11,8 +11,9 @@ namespace CarRace
     {
         //passing the local value to global variable using this keyword
         public Bet MyBet;
-        public decimal Cash;
+        public decimal Cash, finalCash;
         public int[] GuyArray;
+        
 
         public RadioButton MyRadioButton;
         public Label MyLabel;
@@ -53,8 +54,11 @@ namespace CarRace
         //this method is used for collection of the player if he is winner then it will increment in his account
         public void Collect(string Winner)
         {
-            if (MyBet != null) 
+           
+            if (MyBet != null)
+            {
                 Cash = Cash + MyBet.PayOut(Winner);
+            }
             ClearBet();
             StatusUpdate();
         }
